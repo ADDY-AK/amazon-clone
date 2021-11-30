@@ -1,16 +1,29 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 function Home() {
   return (
     <div className="home">
       <div className="home_container">
-        <img
+      <Carousel autoPlay={true} infiniteLoop={true} autoFocus={true} showIndicators={false} showStatus={false} showThumbs={false}>
+                <div className="carousel_image">
+                    <img className="home_image" src="https://images-eu.ssl-images-amazon.com/images/G/31/Gateway/Zeitgeist/Mar20/Covid19/2021/IN_GWD_Covid19_CustomerMsg_MH_ENG_1x_v1._CB669806110_.jpg" alt="amazon prime" />
+                </div>
+                <div className="carousel_image">
+                    <img className="home_image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="amazon prime" />
+                </div>
+                <div className="carousel_image">
+                    <img className="home_image" src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2021/X-site/SingleTitle/WW84/Launch/1500x600_Hero-Tall_JPN._CB669639160_.jpg" alt="amazon prime" />
+                </div>
+            </Carousel>
+        {/* <img
           className="home_image"
           src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
           alt="amazon prime"
-        />
+        /> */}
         <div className="home_row">
           <Product
             id="1"
